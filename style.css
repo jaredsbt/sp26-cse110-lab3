@@ -142,14 +142,12 @@ section:has(ul) {
   padding: 10px;
 }
 
-section {
-  & h2 {
-    color: teal;
-  }
+section h2 {
+  color: teal;
+}
 
-  & ul {
-    border-radius: 8px;
-  }
+section ul {
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
