@@ -5,42 +5,79 @@
   --text-color: #333;
 }
 
-body {
+* {
+  box-sizing: border-box;
+}
+
+#main-body {
+  background-color: #fafafa;
   font-family: 'Poppins', Arial, sans-serif;
   background: var(--bg-color, white);
   color: var(--text-color, black);
-  margin: 0; 
-  padding: 0; 
-}
-
-body {
+  margin: 0;
+  padding: 0;
   border-style: solid;
   border-color: var(--main-color);
   border-width: 5px;
   border-radius: 10px;
-
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-
   padding: 20px 30px 20px 30px;
-
   max-width: 1200px;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   color: var(--main-color);
   text-align: center;
   text-decoration: underline;
-
   margin: 20px;
 }
 
 h2 {
   color: var(--accent-color);
-  margin: 10px 0 10px 0; 
+  font-weight: bold;
+}
+
+.title {
+  color: purple;
+}
+
+h1.title {
+  text-transform: uppercase;
+}
+
+ul[data-type="attendance"] {
+  background-color: #d5f5e3;
+}
+
+li:hover {
+  background-color: yellow;
+}
+
+h1, p {
+  letter-spacing: 1px;
+}
+
+section p {
+  color: darkblue;
+}
+
+ul > li {
+  border: 1px solid black;
+}
+
+h2 + ul {
+  margin-top: 5px;
+}
+
+h2 ~ p {
+  font-style: italic;
 }
 
 ul {
@@ -48,12 +85,10 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   justify-items: center;
-
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-
   background: #eaf2f8;
 }
 
@@ -63,15 +98,8 @@ li {
   padding: 10px;
   border: 1px solid gray;
   border-radius: 5px;
-
   width: 10em;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  display: inline-block;
 }
 
 img {
@@ -79,6 +107,8 @@ img {
   width: 50%;
   height: auto;
   margin: 20px auto;
+  position: relative;
+  left: 10px;
 }
 
 audio, video {
@@ -91,11 +121,6 @@ h1:first-of-type {
   position: sticky;
   top: 0;
   background: white;
-}
-
-img {
-  position: relative;
-  left: 10px;
 }
 
 a {
@@ -115,24 +140,35 @@ p {
   display: block;
 }
 
-li {
-  display: inline-block;
-}
-
 body {
   background: linear-gradient(to right, #f4f6f8, #d6eaf8);
 }
 
+section:has(ul) {
+  border: 2px dashed orange;
+  padding: 10px;
+}
+
+section {
+  & h2 {
+    color: teal;
+  }
+
+  & ul {
+    border-radius: 8px;
+  }
+}
+
 @media (max-width: 768px) {
   ul {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 
   img {
     width: 80%;
   }
 
-  body {
+  #main-body {
     padding: 10px;
   }
 }
