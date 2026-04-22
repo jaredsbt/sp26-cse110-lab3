@@ -1,0 +1,148 @@
+:root {
+  --main-color: #2c3e50;
+  --accent-color: #3498db;
+  --bg-color: #f4f6f8;
+  --text-color: #333;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--bg-color, white);
+  color: var(--text-color, black);
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  border-style: solid;
+  border-color: var(--main-color);
+  border-width: 5px;
+  border-radius: 10px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 20px 30px 20px 30px;
+
+  max-width: 1200px;
+  min-width: 300px;
+}
+
+h1 {
+  color: var(--main-color);
+  text-align: center;
+  text-decoration: underline;
+
+  margin: 20px;
+}
+
+h2 {
+  color: var(--accent-color);
+  margin: 10px 0 10px 0; 
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background: #eaf2f8;
+}
+
+li {
+  list-style: none;
+  background: white;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+
+  width: 10em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+img {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 20px auto;
+}
+
+audio, video {
+  display: inline-block;
+  margin: 10px;
+  width: 300px;
+}
+
+h1:first-of-type {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+img {
+  position: relative;
+  left: 10px;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: green;
+}
+
+p {
+  display: block;
+}
+
+li {
+  display: inline-block;
+}
+
+body {
+  background: linear-gradient(to right, #f4f6f8, #d6eaf8);
+}
+
+@media (max-width: 768px) {
+  ul {
+    grid-template-columns: 1fr; 
+  }
+
+  img {
+    width: 80%;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  audio, video {
+    width: 100%;
+  }
+}
